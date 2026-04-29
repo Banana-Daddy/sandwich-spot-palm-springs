@@ -372,6 +372,28 @@ tailwind.config = {
       </div>
     </div>
 
+    <!-- Cast of characters strip — small, single row, doesn't break the menu flow -->
+    <div class="mb-10">
+      <div class="flex items-baseline justify-between mb-3 flex-wrap gap-2">
+        <div class="font-hand text-pickle text-2xl -rotate-1">— featured cast, in order of appearance —</div>
+        <div class="text-xs font-medium uppercase tracking-widest text-ink/50">Sinatra · Tennis · Hope · Somers</div>
+      </div>
+      <div class="grid grid-cols-4 gap-3 sm:gap-5">
+        <div class="doodle reveal -rotate-2">
+          <img src="images/d4-fedora-martini.jpg" alt="Doodle of a navy fedora atop a martini glass — Sinatra reference" loading="lazy" class="w-full border-2 border-ink shadow-block-sm">
+        </div>
+        <div class="doodle reveal rotate-1" style="transition-delay: .08s;">
+          <img src="images/d5-tennis-racket.jpg" alt="Doodle of a wooden tennis racket and yellow ball — BNP Paribas / Indian Wells reference" loading="lazy" class="w-full border-2 border-ink shadow-block-sm">
+        </div>
+        <div class="doodle reveal -rotate-1" style="transition-delay: .16s;">
+          <img src="images/d7-golf-club.jpg" alt="Doodle of a wooden golf club and ball — Bob Hope reference" loading="lazy" class="w-full border-2 border-ink shadow-block-sm">
+        </div>
+        <div class="doodle reveal rotate-2" style="transition-delay: .24s;">
+          <img src="images/d6-thighmaster.jpg" alt="Doodle of a 1980s Thighmaster device — Suzanne Somers reference" loading="lazy" class="w-full border-2 border-ink shadow-block-sm">
+        </div>
+      </div>
+    </div>
+
     <!-- Menu list -->
     <div class="grid md:grid-cols-2 gap-x-10 gap-y-6">
       <!-- Items 01-12 with doodle accents interspersed -->
@@ -384,13 +406,6 @@ tailwind.config = {
         <div class="flex items-baseline gap-3"><span class="font-display text-tomato text-2xl">02</span><h3 class="font-display text-2xl uppercase tracking-wide">The Djokovic</h3></div>
         <p class="text-sm mt-1 leading-relaxed">Warm turkey · bacon · cheddar · avocado.</p>
       </article>
-
-      <!-- Doodle accent: fedora + martini -->
-      <div class="md:col-span-2 my-2 flex justify-center">
-        <div class="doodle reveal -rotate-3 w-32 sm:w-40">
-          <img src="images/d4-fedora-martini.jpg" alt="Doodle of a navy-blue fedora resting atop a martini glass with an olive — Sinatra-era reference" loading="lazy" class="w-full border-2 border-ink shadow-block-sm">
-        </div>
-      </div>
 
       <article class="border-b-2 border-ink/30 pb-4 reveal">
         <div class="flex items-baseline gap-3"><span class="font-display text-tomato text-2xl">03</span><h3 class="font-display text-2xl uppercase tracking-wide">The Grand Slam</h3></div>
@@ -443,13 +458,6 @@ tailwind.config = {
         <p class="font-hand text-pickle text-lg mt-1">For the meat-curious. Killer in a friendly way.</p>
       </article>
 
-      <!-- Doodle accent: tennis racket -->
-      <div class="md:col-span-2 my-2 flex justify-center">
-        <div class="doodle reveal rotate-3 w-32 sm:w-40">
-          <img src="images/d5-tennis-racket.jpg" alt="Doodle of a vintage wooden tennis racket with red leather grip and a yellow tennis ball in the strings" loading="lazy" class="w-full border-2 border-ink shadow-block-sm">
-        </div>
-      </div>
-
       <article class="border-b-2 border-ink/30 pb-4 reveal">
         <div class="flex items-baseline gap-3"><span class="font-display text-tomato text-2xl">11</span><h3 class="font-display text-2xl uppercase tracking-wide">The Thighmaster</h3></div>
         <p class="text-sm mt-1 leading-relaxed">Marinated chicken · BBQ · teriyaki · bomb sauce · choice of cheese.</p>
@@ -500,13 +508,6 @@ tailwind.config = {
         <p class="text-sm mt-1 leading-relaxed">Marinated chicken · teriyaki · pineapple · jack cheese.</p>
       </article>
 
-      <!-- Doodle accent: golf club -->
-      <div class="md:col-span-2 my-2 flex justify-center">
-        <div class="doodle reveal -rotate-3 w-28 sm:w-36">
-          <img src="images/d7-golf-club.jpg" alt="Doodle of a vintage wooden golf driver with a checkered grip, a small golf ball just below" loading="lazy" class="w-full border-2 border-ink shadow-block-sm">
-        </div>
-      </div>
-
       <article class="border-b-2 border-ink/30 pb-4 reveal">
         <div class="flex items-baseline gap-3"><span class="font-display text-tomato text-2xl">19</span><h3 class="font-display text-2xl uppercase tracking-wide">The Federer</h3></div>
         <p class="text-sm mt-1 leading-relaxed">Warm turkey · prosciutto · avocado · Swiss cheese.</p>
@@ -525,13 +526,6 @@ tailwind.config = {
         <div class="flex items-baseline gap-3"><span class="font-display text-tomato text-2xl">22</span><h3 class="font-display text-2xl uppercase tracking-wide">The Klaus</h3></div>
         <p class="text-sm mt-1 leading-relaxed">Pastrami · sauerkraut · 1000 Island · Swiss.</p>
       </article>
-
-      <!-- Doodle accent: Thighmaster -->
-      <div class="md:col-span-2 my-2 flex justify-center">
-        <div class="doodle reveal rotate-2 w-28 sm:w-36">
-          <img src="images/d6-thighmaster.jpg" alt="Doodle of a 1980s Suzanne Somers Thighmaster exercise device with red foam grips" loading="lazy" class="w-full border-2 border-ink shadow-block-sm">
-        </div>
-      </div>
 
       <article class="border-b-2 border-ink/30 pb-4 reveal">
         <div class="flex items-baseline gap-3"><span class="font-display text-tomato text-2xl">23</span><h3 class="font-display text-2xl uppercase tracking-wide">The Frowzy Red Head</h3></div>
