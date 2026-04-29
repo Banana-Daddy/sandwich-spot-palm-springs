@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Sandwich Gazette · Special Emergency Edition · April 2026</title>
+<meta name="description" content="THE SANDWICH GAZETTE — Palm Springs' broadsheet of record, covering bread, sandwiches, and the emergency on Palm Canyon Drive. Established 2007.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Sandwich Gazette · Palm Springs">
+<meta property="og:title" content="The Sandwich Gazette · Special Emergency Edition · April 2026">
+<meta property="og:description" content="BREAKING — bread crisis hits Palm Canyon Drive. Twenty-four suspects identified. Dutch Crunch supply limited. The local broadsheet covering the only sandwich emergency that matters.">
+<meta property="og:url" content="https://banana-daddy.github.io/sandwich-spot-palm-springs/direction-emergency-v2.html">
+<meta property="og:image" content="https://banana-daddy.github.io/sandwich-spot-palm-springs/images/og-emergency-v2.jpg">
+<meta property="og:image:secure_url" content="https://banana-daddy.github.io/sandwich-spot-palm-springs/images/og-emergency-v2.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A broadsheet newspaper front page reading THE SANDWICH GAZETTE with a BREAKING red ribbon and a doodle of a sandwich on a stretcher.">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Sandwich Gazette · Special Emergency Edition">
+<meta name="twitter:description" content="BREAKING — bread crisis hits Palm Canyon Drive. The local broadsheet of record.">
+<meta name="twitter:image" content="https://banana-daddy.github.io/sandwich-spot-palm-springs/images/og-emergency-v2.jpg">
+<meta name="twitter:image:alt" content="A broadsheet newspaper front page reading THE SANDWICH GAZETTE.">
+
+<!-- Theme + favicon -->
+<meta name="theme-color" content="#FAF6E9">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" sizes="512x512" href="images/favicon-512.png">
+<link rel="canonical" href="https://banana-daddy.github.io/sandwich-spot-palm-springs/direction-emergency-v2.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=Roboto+Slab:wght@300;400;500;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        tomato: '#E63946',
+        tomatoDark: '#B5232E',
+        mustard: '#FFC83D',
+        pickle: '#6B8E23',
+        ink: '#111111',
+        cream: '#FAF6E9',
+        creamDark: '#EFE5C8',
+        newsprint: '#F5EFE0'
+      },
+      fontFamily: {
+        head: ['"DM Serif Display"','Georgia','serif'],
+        masthead: ['Anton','sans-serif'],
+        body: ['"Roboto Slab"','Georgia','serif'],
+        sans: ['Inter','sans-serif'],
+        hand: ['Caveat','cursive']
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-padding-top: 4rem; }
+  section[id] { scroll-margin-top: 4rem; }
+  html, body { background: #F5EFE0; color: #111; font-family: 'Roboto Slab', Georgia, serif; }
+
+  /* Newspaper paper texture */
+  .newsprint {
+    background-color: #F5EFE0;
+    background-image:
+      radial-gradient(rgba(17,17,17,0.05) 1px, transparent 1px),
+      radial-gradient(rgba(180,140,80,0.04) 1px, transparent 1px);
+    background-size: 14px 14px, 22px 22px;
+    background-position: 0 0, 7px 11px;
+  }
+
+  /* Halftone */
+  .halftone {
+    background-image: radial-gradient(rgba(17,17,17,0.45) 1.4px, transparent 1.6px);
+    background-size: 6px 6px;
+  }
+  .halftone-light {
+    background-image: radial-gradient(rgba(17,17,17,0.25) 1px, transparent 1.4px);
+    background-size: 6px 6px;
+  }
+  .halftone-tomato {
+    background-image: radial-gradient(rgba(230,57,70,0.6) 1.2px, transparent 1.4px);
+    background-size: 6px 6px;
+  }
+
+  /* Drop cap (newspaper style) */
+  .dropcap::first-letter {
+    font-family: 'DM Serif Display', serif;
+    float: left;
+    font-size: 5rem;
+    line-height: 0.85;
+    padding: 0.35rem 0.55rem 0 0;
+    color: #111;
+  }
+
+  /* Marquee */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .ticker {
+    display: flex;
+    width: max-content;
+    animation: marquee 60s linear infinite;
+  }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* Decorative rules */
+  .rule-double { border-top: 3px double #111; }
+  .rule-thick { border-top: 4px solid #111; border-bottom: 1px solid #111; height: 6px; }
+
+  /* Column gap */
+  .news-col { columns: 1; column-gap: 2rem; }
+  @media (min-width: 768px) { .news-col-2 { columns: 2; column-gap: 2rem; } .news-col-3 { columns: 3; column-gap: 2rem; } }
+  .news-col p, .news-col-2 p, .news-col-3 p { break-inside: avoid; margin-bottom: 1rem; }
+
+  /* Tabular figures */
+  .tab { font-variant-numeric: tabular-nums; }
+
+  /* Stamp */
+  .stamp {
+    border: 3px double #D62828;
+    color: #D62828;
+    transform: rotate(-6deg);
+    padding: 0.25rem 0.6rem;
+    display: inline-block;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.18em;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .ticker { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* Mobile column reset */
+  @media (max-width: 767px) { .news-col-2, .news-col-3 { columns: 1 !important; } }
+</style>
+</head>
+
+<body class="newsprint antialiased">
+
+<!-- ==================== TICKER ==================== -->
+<div class="bg-tomato text-cream border-b-2 border-ink overflow-hidden">
+  <div class="ticker py-1.5 font-masthead tracking-widest text-xs sm:text-sm">
+    <span class="px-6 whitespace-nowrap">★ BREAKING · DUTCH CRUNCH SUPPLY LIMITED TO 24 SANDWICHES, EXPERTS UNFAZED</span>
+    <span class="px-6 whitespace-nowrap">★ TIPS HOTLINE · (760) 778-7900</span>
+    <span class="px-6 whitespace-nowrap">★ WEATHER · DRY HEAT, AS USUAL</span>
+    <span class="px-6 whitespace-nowrap">★ TENNIS INDEX · UP 6-LOVE</span>
+    <span class="px-6 whitespace-nowrap">★ OPEN DAILY 10 TO 6</span>
+    <span class="px-6 whitespace-nowrap">★ BREAKING · DUTCH CRUNCH SUPPLY LIMITED TO 24 SANDWICHES, EXPERTS UNFAZED</span>
+    <span class="px-6 whitespace-nowrap">★ TIPS HOTLINE · (760) 778-7900</span>
+    <span class="px-6 whitespace-nowrap">★ WEATHER · DRY HEAT, AS USUAL</span>
+    <span class="px-6 whitespace-nowrap">★ TENNIS INDEX · UP 6-LOVE</span>
+    <span class="px-6 whitespace-nowrap">★ OPEN DAILY 10 TO 6</span>
+  </div>
+</div>
+
+<!-- ==================== MASTHEAD ==================== -->
+<header class="border-b-4 border-ink">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-5 sm:pt-7 pb-3">
+    <!-- Top meta strip -->
+    <div class="flex justify-between items-baseline text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.18em] text-ink/70 pb-2 border-b border-ink">
+      <div>Vol. XIX · No. 4</div>
+      <div class="hidden sm:block italic font-body normal-case tracking-normal">— Palm Springs' broadsheet of record since MMVII —</div>
+      <div class="tab">Weds. April 29, 2026 · 25¢</div>
+    </div>
+
+    <!-- The masthead -->
+    <div class="text-center pt-4 sm:pt-5">
+      <div class="font-masthead text-[16vw] md:text-[10rem] leading-[0.85] tracking-tight uppercase text-ink">
+        The Sandwich
+      </div>
+      <div class="font-masthead text-[16vw] md:text-[10rem] leading-[0.85] tracking-tight uppercase text-tomato -mt-2 md:-mt-4">
+        Gazette
+      </div>
+      <div class="mt-2 sm:mt-3 text-[10px] sm:text-xs font-sans uppercase tracking-[0.32em] text-ink/80">
+        — A bread, sandwich &amp; emergency journal · Palm Springs, California —
+      </div>
+    </div>
+
+    <!-- Section nav -->
+    <nav class="mt-4 sm:mt-5 pt-3 border-t-2 border-ink">
+      <ul class="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-7 gap-y-2 text-[11px] sm:text-xs font-sans uppercase tracking-[0.18em] font-bold">
+        <li><a href="#breaking" class="hover:text-tomato">Breaking</a></li>
+        <li><span class="text-ink/30">·</span></li>
+        <li><a href="#bread-watch" class="hover:text-tomato">Bread Watch</a></li>
+        <li><span class="text-ink/30">·</span></li>
+        <li><a href="#classifieds" class="hover:text-tomato">Classifieds</a></li>
+        <li><span class="text-ink/30">·</span></li>
+        <li><a href="#letters" class="hover:text-tomato">Letters</a></li>
+        <li><span class="text-ink/30">·</span></li>
+        <li><a href="#wanted" class="hover:text-tomato">Wanted</a></li>
+        <li><span class="text-ink/30">·</span></li>
+        <li><a href="#visit" class="hover:text-tomato">Visit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================== ABOVE THE FOLD — LEAD STORY ==================== -->
+<section id="breaking" class="px-4 sm:px-6 py-8 sm:py-10 border-b-2 border-ink">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- BREAKING ribbon -->
+    <div class="flex items-center gap-3 mb-4">
+      <div class="bg-tomato text-cream font-masthead text-base sm:text-xl tracking-widest px-3 py-1.5 border-2 border-ink">★ BREAKING ★</div>
+      <div class="font-sans uppercase tracking-[0.18em] text-[10px] sm:text-xs text-ink/70">SPECIAL EMERGENCY EDITION · WIRED FROM 276 N PALM CANYON DR.</div>
+    </div>
+
+    <!-- Lead headline -->
+    <h1 class="font-head leading-[0.92] text-[10vw] md:text-7xl text-ink mb-4">
+      Bread crisis hits Palm Canyon Drive;<br class="hidden md:inline">
+      <span class="italic">twenty-four suspects identified.</span>
+    </h1>
+    <h2 class="font-body italic text-xl sm:text-2xl text-ink/80 leading-snug mb-6 max-w-3xl">
+      Witnesses describe symptoms of "drooling" and "time loss" near 276 North Palm Canyon. Authorities recommend Dutch Crunch, applied liberally.
+    </h2>
+
+    <!-- Byline rule -->
+    <div class="rule-double mb-5"></div>
+    <div class="flex flex-wrap justify-between items-baseline text-xs font-sans uppercase tracking-[0.2em] text-ink/70 mb-6 gap-3">
+      <div><span class="font-bold text-ink">By Dena Banes</span> · staff sandwich correspondent</div>
+      <div class="font-body normal-case tracking-normal italic text-base">— filed at the counter, midday rush.</div>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-6 md:gap-8">
+
+      <!-- Lead photo -->
+      <figure class="md:col-span-7 reveal">
+        <div class="border-2 border-ink bg-cream relative overflow-hidden">
+          <img src="images/d1-sandwich-stretcher.jpg" alt="Doodle of a giant Dutch Crunch sandwich strapped to a hospital stretcher being rushed by EMTs through swinging emergency room doors" loading="lazy" class="w-full h-auto">
+          <div class="absolute top-3 left-3 bg-tomato text-cream font-masthead text-xs tracking-widest px-2 py-1 border border-ink">PHOTO STAFF · GAZETTE</div>
+          <div class="absolute bottom-3 right-3 stamp text-xs sm:text-sm bg-cream">★ EXCLUSIVE ★</div>
+        </div>
+        <figcaption class="mt-2 text-xs font-sans uppercase tracking-wider text-ink/70">
+          <span class="font-bold text-ink">FILE PHOTO</span> · A four-tiered Dutch Crunch sandwich, en route to triage.
+        </figcaption>
+      </figure>
+
+      <!-- Lead body, 2 cols -->
+      <div class="md:col-span-5 news-col-2 font-body text-[15px] sm:text-base leading-[1.55] text-ink/90">
+        <p class="dropcap">For nineteen years now, the same small storefront in the Henry Frank Arcade has been baking the same Dutch Crunch loaf, and the same line has been forming around the corner just before lunch. The line is not a problem. The line is the lead.</p>
+        <p>"I've been here since 2007," said Dena Banes, the shop's longtime catering desk. "I bake the bread before you wake up. The sandwiches name themselves." Banes declined to comment further on what she called "the cheeky ones."</p>
+        <p>The shop's twenty-four specialty sandwiches are each named after either a tennis legend or a Palm Springs cultural icon — Sinatra, Hope, Manilow, the Federer. Sources confirm prices have remained stable at $14.75.</p>
+        <p>Authorities at <strong>(760) 778-7900</strong> can be reached for further comment, but most callers report being immediately distracted by the menu. <em>The Gazette</em> will continue to monitor the situation.</p>
+      </div>
+    </div>
+
+    <!-- Pull quote spread across the bottom -->
+    <div class="mt-10 border-y-4 border-double border-ink py-6">
+      <div class="font-head italic text-3xl sm:text-5xl text-ink leading-tight text-center max-w-4xl mx-auto">
+        "Worth the wait. Worth the line. Worth the entire afternoon."
+      </div>
+      <div class="mt-3 text-center font-sans uppercase tracking-[0.22em] text-[10px] sm:text-xs text-ink/60">
+        — Quote of the day · sourced from Yelp, where 2,457 readers have filed similar testimony.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== STATS / SUBSECTION HEADER ROW ==================== -->
+<section class="px-4 sm:px-6 py-6 border-b-2 border-ink halftone-light">
+  <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5">
+    <div class="bg-cream border-2 border-ink p-3 sm:p-4 text-center">
+      <div class="font-head text-3xl sm:text-4xl text-ink">2,457</div>
+      <div class="text-[10px] sm:text-xs font-sans uppercase tracking-[0.18em] mt-1 text-ink/70">Witnesses on Yelp</div>
+    </div>
+    <div class="bg-cream border-2 border-ink p-3 sm:p-4 text-center">
+      <div class="font-head text-3xl sm:text-4xl text-tomato">★ 4.7</div>
+      <div class="text-[10px] sm:text-xs font-sans uppercase tracking-[0.18em] mt-1 text-ink/70">Diagnosis</div>
+    </div>
+    <div class="bg-cream border-2 border-ink p-3 sm:p-4 text-center">
+      <div class="font-head text-3xl sm:text-4xl text-ink">#4 / 345</div>
+      <div class="text-[10px] sm:text-xs font-sans uppercase tracking-[0.18em] mt-1 text-ink/70">Trip-Advisor</div>
+    </div>
+    <div class="bg-cream border-2 border-ink p-3 sm:p-4 text-center">
+      <div class="font-head text-3xl sm:text-4xl text-ink tab">2007</div>
+      <div class="text-[10px] sm:text-xs font-sans uppercase tracking-[0.18em] mt-1 text-ink/70">Year of Bread</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BREAD WATCH (the Dutch Crunch deep-dive) ==================== -->
+<section id="bread-watch" class="px-4 sm:px-6 py-10 sm:py-14 border-b-2 border-ink">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="flex items-end justify-between flex-wrap gap-3 mb-4">
+      <div>
+        <div class="font-sans uppercase tracking-[0.22em] text-[11px] text-tomato font-bold">SECTION B · BREAD WATCH</div>
+        <h2 class="font-head text-4xl sm:text-6xl leading-tight text-ink mt-1">Field Guide: <span class="italic">the loaf, in cross-section.</span></h2>
+      </div>
+      <div class="font-hand text-2xl text-pickle">— a public-service report.</div>
+    </div>
+
+    <div class="rule-thick mb-6"></div>
+
+    <div class="grid md:grid-cols-12 gap-6 md:gap-10 items-start">
+      <figure class="md:col-span-7 reveal">
+        <div class="border-2 border-ink bg-cream">
+          <img src="images/d8-dutch-crunch-infographic.jpg" alt="Doodle cross-section of a Dutch Crunch loaf labeled with three callouts: THE CRUST shatters on contact, THE CRUMB 30 percent air, BAKED AT DAWN daily" loading="lazy" class="w-full h-auto">
+        </div>
+        <figcaption class="mt-2 text-xs font-sans uppercase tracking-wider text-ink/70">
+          <span class="font-bold text-ink">DIAGRAM</span> · The loaf, cut. Three observations follow.
+        </figcaption>
+      </figure>
+
+      <div class="md:col-span-5 news-col font-body text-[15px] sm:text-base leading-[1.55] text-ink/90">
+        <p class="dropcap">Dutch Crunch — the Northern California staple — gets its name from the cracked tortoise-shell crust formed by a rice-flour paste applied just before baking. <em>Gazette</em> sources confirm Banes mixes the paste at sunrise, bakes by 8am, and at any given moment the loaf you are holding is no more than a few hours old.</p>
+        <p>It is the only sandwich-bread in Palm Springs that requires both hands and a paper bag. Crust shatters on contact. Crumb is roughly thirty percent air. Tomato slides slightly. <em>The Gazette</em>'s science desk has confirmed: this is correct. This is the design.</p>
+        <p class="font-hand text-tomato text-2xl mt-2 leading-snug">If you don't pick Dutch Crunch we will judge you (lovingly).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CLASSIFIEDS — THE MENU ==================== -->
+<section id="classifieds" class="px-4 sm:px-6 py-10 sm:py-14 border-b-2 border-ink bg-creamDark/30">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-end justify-between flex-wrap gap-3 mb-4">
+      <div>
+        <div class="font-sans uppercase tracking-[0.22em] text-[11px] text-tomato font-bold">SECTION C · THE CLASSIFIEDS</div>
+        <h2 class="font-head text-4xl sm:text-6xl leading-tight text-ink mt-1">Twenty-four <span class="italic">suspects</span> at large.</h2>
+        <p class="font-body italic text-lg text-ink/80 mt-1 max-w-2xl">All priced at $14.75. Make any specialty a salad at no extra charge. Combo (chips + 22oz drink) +$3.99.</p>
+      </div>
+      <div class="border-2 border-ink bg-tomato text-cream font-masthead text-sm tracking-widest px-3 py-2 -rotate-2">FOR HIRE — ALL SHIFTS</div>
+    </div>
+
+    <div class="rule-thick mb-6"></div>
+
+    <!-- 24 sandwiches — 3 column grid on desktop, 2 on tablet, 1 on mobile -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-5 font-body text-[14.5px] sm:text-[15px] leading-snug text-ink/90">
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">01</span><h3 class="font-head text-xl text-ink">The Chairman of the Board</h3></div><p class="text-sm mt-1">Ham · salami · prosciutto · provolone · Italian dressing.</p><p class="font-hand text-pickle text-base mt-1">For Frank, of course.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">02</span><h3 class="font-head text-xl text-ink">The Djokovic</h3></div><p class="text-sm mt-1">Warm turkey · bacon · cheddar · avocado.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">03</span><h3 class="font-head text-xl text-ink">The Grand Slam</h3></div><p class="text-sm mt-1">Turkey · ham · roast beef · choice of cheese.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">04</span><h3 class="font-head text-xl text-ink">Thanks for the Memories</h3></div><p class="text-sm mt-1">Warm turkey · cranberry · cream cheese.</p><p class="font-hand text-pickle text-base mt-1">Bob Hope's. Don't argue with the legacy.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">05</span><h3 class="font-head text-xl text-ink">The Dinah</h3></div><p class="text-sm mt-1">Marinated chicken · bacon · avocado · cheese.</p><p class="font-hand text-pickle text-base mt-1">Most-ordered. Bomb Sauce sleeper.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">06</span><h3 class="font-head text-xl text-ink">The Jamal</h3></div><p class="text-sm mt-1">Warm roast beef · Bomb Sauce · cream cheese.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">07</span><h3 class="font-head text-xl text-ink">The Copacabana</h3></div><p class="text-sm mt-1">Warm pastrami · cheese.</p><p class="font-hand text-pickle text-base mt-1">Manilow. Hottest sandwich in Havana.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">08</span><h3 class="font-head text-xl text-ink">But It's a Dry Heat</h3></div><p class="text-sm mt-1">Marinated chicken · hot sauce · Bomb · pepper jack.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">09</span><h3 class="font-head text-xl text-ink">The Gene Autry</h3></div><p class="text-sm mt-1">Warm roast beef · BBQ sauce · jack cheese.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">10</span><h3 class="font-head text-xl text-ink">The Dream Killer</h3></div><p class="text-sm mt-1">Veggies · avocado · cucumber · sprouts · roasted red peppers · cheese.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">11</span><h3 class="font-head text-xl text-ink">The Thighmaster</h3></div><p class="text-sm mt-1">Marinated chicken · BBQ · teriyaki · Bomb · cheese.</p><p class="font-hand text-pickle text-base mt-1">Suzanne. We squeeze hard.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">12</span><h3 class="font-head text-xl text-ink">The Bear Necessities</h3></div><p class="text-sm mt-1">Warm pastrami · roast beef · salami · cheese.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">13</span><h3 class="font-head text-xl text-ink">The Sunny and Share</h3></div><p class="text-sm mt-1">Bacon · lettuce · tomato · avocado.</p><p class="font-hand text-pickle text-base mt-1">I got you babe.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">14</span><h3 class="font-head text-xl text-ink">The Indian Wells</h3></div><p class="text-sm mt-1">Marinated chicken · BBQ sauce · jack cheese.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">15</span><h3 class="font-head text-xl text-ink">The DILF</h3></div><p class="text-sm mt-1">Warm salami · Bomb · pepper jack.</p><p class="font-hand text-pickle text-base mt-1">Don't make us spell it out. (We will.)</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">16</span><h3 class="font-head text-xl text-ink">The Serve and Volley</h3></div><p class="text-sm mt-1">Warm turkey · avocado · Bomb · cream cheese.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">17</span><h3 class="font-head text-xl text-ink">The Dirty Weekend</h3></div><p class="text-sm mt-1">Warm roast beef · 1000 Island · cheddar.</p><p class="font-hand text-pickle text-base mt-1">No follow-up questions.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">18</span><h3 class="font-head text-xl text-ink">The Royal Hawaiian</h3></div><p class="text-sm mt-1">Marinated chicken · teriyaki · pineapple · jack.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">19</span><h3 class="font-head text-xl text-ink">The Federer</h3></div><p class="text-sm mt-1">Warm turkey · prosciutto · avocado · Swiss.</p><p class="font-hand text-pickle text-base mt-1">Reigns supreme. Yelp's top pick.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">20</span><h3 class="font-head text-xl text-ink">The Rafa</h3></div><p class="text-sm mt-1">Roast beef · bacon · BBQ · cheddar.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">21</span><h3 class="font-head text-xl text-ink">The French Open</h3></div><p class="text-sm mt-1">Marinated chicken · hot sauce · blue cheese · pepper jack.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">22</span><h3 class="font-head text-xl text-ink">The Klaus</h3></div><p class="text-sm mt-1">Pastrami · sauerkraut · 1000 Island · Swiss.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">23</span><h3 class="font-head text-xl text-ink">The Frowzy Red Head</h3></div><p class="text-sm mt-1">Meatballs · marinara · parsley · parmesan · Secret · provolone.</p></article>
+      <article class="border-l-2 border-ink pl-3 reveal"><div class="flex items-baseline gap-2"><span class="font-head text-tomato text-xl tab">24</span><h3 class="font-head text-xl text-ink">The MILF</h3></div><p class="text-sm mt-1">Marinated chicken · cranberry · Bomb · pepper jack.</p><p class="font-hand text-pickle text-base mt-1">Made it. Loved it. Famous.</p></article>
+    </div>
+
+    <!-- Sub-classifieds: build / kids / salads -->
+    <div class="rule-thick mt-10 mb-6"></div>
+    <div class="grid sm:grid-cols-3 gap-5 text-[14.5px] leading-snug">
+      <div class="border-2 border-ink p-4 bg-cream">
+        <div class="font-head text-2xl text-ink mb-1">Build Your Own — $12.50</div>
+        <div class="text-[11px] font-sans uppercase tracking-[0.18em] text-tomato mb-2">CLASSIFIED · FOR HIRE</div>
+        <p>Turkey · roast beef · ham · salami · pastrami · prosciutto · chicken salad · tuna salad. Add cheese $0.99.</p>
+      </div>
+      <div class="border-2 border-ink p-4 bg-cream">
+        <div class="font-head text-2xl text-ink mb-1">Salads</div>
+        <div class="text-[11px] font-sans uppercase tracking-[0.18em] text-tomato mb-2">CLASSIFIED · FRESH</div>
+        <p>Green $7.99 · Caesar $10.50 · Tuna or Chicken Salad $13.99 · Cobb or Chef $14.75.</p>
+      </div>
+      <div class="border-2 border-ink p-4 bg-cream">
+        <div class="font-head text-2xl text-ink mb-1">Kids' Section</div>
+        <div class="text-[11px] font-sans uppercase tracking-[0.18em] text-tomato mb-2">CLASSIFIED · UNDER-12</div>
+        <p>PB&amp;J $6.50 · Grilled Cheese $7.50 · The Munki $7.50.</p>
+      </div>
+    </div>
+
+    <!-- Bread + sauces info as classified -->
+    <div class="grid sm:grid-cols-2 gap-5 mt-5 text-[14.5px] leading-snug">
+      <div class="border-2 border-ink p-4 bg-mustard">
+        <div class="font-head text-2xl text-ink mb-1">Choice of Bread</div>
+        <p><strong>Rolls:</strong> Dutch Crunch · Wheat · Sourdough · Sweet French.<br><strong>Sliced:</strong> Sourdough · Wheat · Rye · Marble Rye · Multigrain.</p>
+      </div>
+      <div class="border-2 border-ink p-4 bg-mustard">
+        <div class="font-head text-2xl text-ink mb-1">Sauces On Deck</div>
+        <p>Mayo · Mustard · Secret Sauce · <strong>Bomb Sauce</strong> · Ranch · Italian · 1000 Island · Honey Mustard · Blue Cheese · Oil &amp; Vinegar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SIDEBAR ROW: WANTED + WEATHER + TENNIS ==================== -->
+<section class="px-4 sm:px-6 py-10 sm:py-14 border-b-2 border-ink">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+
+    <!-- WANTED POSTER -->
+    <div id="wanted" class="border-2 border-ink bg-cream p-4 sm:p-5 reveal">
+      <div class="text-[10px] font-sans uppercase tracking-[0.22em] text-tomato font-bold mb-2">SECTION D · WANTED</div>
+      <div class="border-y-2 border-ink py-2 mb-3">
+        <div class="font-head text-3xl text-ink leading-none">WANTED</div>
+        <div class="font-sans uppercase tracking-[0.22em] text-[10px] mt-1">— FOR EXCESSIVE BREAD CRUNCHING —</div>
+      </div>
+      <div class="border-2 border-ink overflow-hidden mb-3 halftone-light">
+        <img src="images/d3-doctor-dena.jpg" alt="Doodle of Doctor Dena, the shop's character — a friendly woman in a striped tomato apron and white paper hat holding a sandwich" loading="lazy" class="w-full h-auto">
+      </div>
+      <div class="font-head text-2xl text-ink leading-tight">"Dr. Dena"</div>
+      <div class="text-sm font-body text-ink/80 mt-1">Last seen baking Dutch Crunch at 276 N. Palm Canyon Drive at sunrise. Considered armed with Bomb Sauce. Approach via the front door, daily, 10am–6pm.</div>
+      <div class="mt-3 stamp text-xs">★ AT LARGE ★</div>
+    </div>
+
+    <!-- WEATHER -->
+    <div class="border-2 border-ink bg-cream p-4 sm:p-5 reveal">
+      <div class="text-[10px] font-sans uppercase tracking-[0.22em] text-tomato font-bold mb-2">SECTION E · WEATHER</div>
+      <div class="border-y-2 border-ink py-2 mb-3">
+        <div class="font-head text-3xl text-ink leading-none">FORECAST</div>
+        <div class="font-sans uppercase tracking-[0.22em] text-[10px] mt-1">— APRIL 2026 · COACHELLA VALLEY —</div>
+      </div>
+      <div class="border-2 border-ink overflow-hidden mb-3">
+        <img src="images/d10-palm-mountains.jpg" alt="Doodle of a palm tree, San Jacinto mountains, and rising sun — Palm Springs landscape" loading="lazy" class="w-full h-auto">
+      </div>
+      <div class="font-body text-sm text-ink/85 leading-snug">
+        <p><strong>Today —</strong> dry. Heat. Sunshine.</p>
+        <p class="mt-1"><strong>Tomorrow —</strong> dry. Heat. Sunshine.</p>
+        <p class="mt-1"><strong>Outlook —</strong> see above. As usual.</p>
+      </div>
+      <div class="mt-3 font-hand text-tomato text-xl">— but it's a dry heat.</div>
+    </div>
+
+    <!-- TENNIS INDEX + STATS -->
+    <div class="border-2 border-ink bg-cream p-4 sm:p-5 reveal">
+      <div class="text-[10px] font-sans uppercase tracking-[0.22em] text-tomato font-bold mb-2">SECTION F · SPORTS</div>
+      <div class="border-y-2 border-ink py-2 mb-3">
+        <div class="font-head text-3xl text-ink leading-none">TENNIS INDEX</div>
+        <div class="font-sans uppercase tracking-[0.22em] text-[10px] mt-1">— BNP PARIBAS · INDIAN WELLS —</div>
+      </div>
+      <div class="border-2 border-ink overflow-hidden mb-3 bg-mustard halftone-light">
+        <img src="images/d5-tennis-racket.jpg" alt="Doodle of a vintage wooden tennis racket and yellow tennis ball" loading="lazy" class="w-full h-auto">
+      </div>
+      <table class="w-full font-body text-sm">
+        <tbody class="divide-y-2 divide-ink/15">
+          <tr><td class="py-1.5 font-bold text-ink">Federer</td><td class="py-1.5 text-right text-pickle">★ TOP PICK</td></tr>
+          <tr><td class="py-1.5 font-bold text-ink">Djokovic</td><td class="py-1.5 text-right text-ink">+0.6 BACON</td></tr>
+          <tr><td class="py-1.5 font-bold text-ink">Rafa</td><td class="py-1.5 text-right text-ink">+0.4 BBQ</td></tr>
+          <tr><td class="py-1.5 font-bold text-ink">Indian Wells</td><td class="py-1.5 text-right text-ink">CONFIRMED</td></tr>
+          <tr><td class="py-1.5 font-bold text-ink">French Open</td><td class="py-1.5 text-right text-tomato">⚠ HOT</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== LETTERS TO THE EDITOR ==================== -->
+<section id="letters" class="px-4 sm:px-6 py-10 sm:py-14 border-b-2 border-ink bg-mustard/40">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-end justify-between flex-wrap gap-3 mb-4">
+      <div>
+        <div class="font-sans uppercase tracking-[0.22em] text-[11px] text-tomato font-bold">SECTION G · LETTERS TO THE EDITOR</div>
+        <h2 class="font-head text-4xl sm:text-6xl leading-tight text-ink mt-1">From the <span class="italic">readership.</span></h2>
+      </div>
+      <div class="font-hand text-2xl text-pickle">— filed at the scene, ★★★★★ stamped over the top.</div>
+    </div>
+
+    <div class="rule-thick mb-6"></div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <article class="border-2 border-ink bg-cream p-5 reveal">
+        <div class="font-sans uppercase tracking-[0.18em] text-[10px] text-ink/60 mb-2">Yelp · April 2026</div>
+        <blockquote class="font-body italic text-base text-ink/90 leading-snug">"The Dutch Crunch bread is fantastic. The marinated chicken is nice and juicy. Worth the wait."</blockquote>
+        <div class="mt-3 font-hand text-xl text-pickle">— Andrea S., Indian Wells</div>
+      </article>
+      <article class="border-2 border-ink bg-cream p-5 reveal" style="transition-delay: .08s;">
+        <div class="font-sans uppercase tracking-[0.18em] text-[10px] text-ink/60 mb-2">Yelp · recurring patron</div>
+        <blockquote class="font-body italic text-base text-ink/90 leading-snug">"The bomb sauce is delicious. Staff treats everyone like a BFF. I try to make a visit once a week."</blockquote>
+        <div class="mt-3 font-hand text-xl text-pickle">— A regular, week 47</div>
+      </article>
+      <article class="border-2 border-ink bg-cream p-5 reveal" style="transition-delay: .16s;">
+        <div class="font-sans uppercase tracking-[0.18em] text-[10px] text-ink/60 mb-2">TripAdvisor · 4.7★</div>
+        <blockquote class="font-body italic text-base text-ink/90 leading-snug">"Charming establishment in the heart of downtown Palm Springs. Both indoor and outdoor seating."</blockquote>
+        <div class="mt-3 font-hand text-xl text-pickle">— TripAdvisor, ranking #4 of 345</div>
+      </article>
+    </div>
+
+    <div class="mt-8 text-center font-body italic text-lg text-ink/80 max-w-3xl mx-auto">
+      Two thousand four hundred fifty-seven five-star letters on Yelp at last count. <em>The Gazette</em> does not respond. The bread does.
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ADVERTISEMENT BLOCK ==================== -->
+<section class="px-4 sm:px-6 py-10 sm:py-12 border-b-2 border-ink">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-[10px] font-sans uppercase tracking-[0.22em] text-ink/60 mb-3 text-center">— PAID ADVERTISEMENT —</div>
+    <div class="border-4 border-double border-ink bg-cream p-6 sm:p-10 grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <div class="font-hand text-tomato text-3xl -rotate-1">— STAT! —</div>
+        <h3 class="font-head text-4xl sm:text-6xl leading-[0.95] text-ink mt-1">A sandwich emergency may be closer than it appears.</h3>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink/85 mt-4">Dial <a href="tel:+17607787900" class="underline decoration-tomato decoration-2 underline-offset-2">(760) 778-7900</a>. Operators are eating sandwiches. Twenty-four-hour notice for catering. No cape required.</p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="tel:+17607787900" class="bg-tomato text-cream font-masthead text-base sm:text-lg tracking-widest px-5 py-3 border-2 border-ink hover:bg-ink hover:text-mustard transition-colors">DIAL NOW →</a>
+          <a href="mailto:Denabanes@aol.com" class="bg-cream border-2 border-ink font-masthead text-base sm:text-lg tracking-widest px-5 py-3 hover:bg-mustard transition-colors">CATER A CRISIS</a>
+        </div>
+      </div>
+      <div class="reveal flex items-center justify-center gap-4">
+        <div class="flex-1">
+          <img src="images/d2-rotary-phone.jpg" alt="Doodle of a 1950s tomato-red rotary phone with the receiver lifted" loading="lazy" class="w-full h-auto border-2 border-ink">
+        </div>
+        <div class="hidden sm:block flex-1">
+          <img src="images/d4-fedora-martini.jpg" alt="Doodle of a fedora resting on a martini glass" loading="lazy" class="w-full h-auto border-2 border-ink">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== VISIT / MAP ==================== -->
+<section id="visit" class="px-4 sm:px-6 py-10 sm:py-14 border-b-2 border-ink">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-8 items-start">
+    <div class="md:col-span-6 reveal">
+      <div class="border-2 border-ink bg-cream">
+        <img src="images/d11-map-sketch.jpg" alt="Hand-drawn doodle map of downtown Palm Springs marking the shop on N Palm Canyon Drive with a red X" loading="lazy" class="w-full h-auto">
+      </div>
+      <div class="mt-2 text-xs font-sans uppercase tracking-wider text-ink/70">
+        <span class="font-bold text-ink">CARTOGRAPHY</span> · The Gazette · approximate scale.
+      </div>
+    </div>
+
+    <div class="md:col-span-6">
+      <div class="text-[10px] font-sans uppercase tracking-[0.22em] text-tomato font-bold mb-2">SECTION H · VISITOR INFORMATION</div>
+      <h2 class="font-head text-4xl sm:text-6xl leading-tight text-ink">Find <span class="italic">us.</span></h2>
+      <p class="font-hand text-2xl text-pickle mt-2 mb-5">— Henry Frank Arcade · across from the Hyatt.</p>
+
+      <div class="font-body text-base sm:text-lg leading-relaxed text-ink/90 space-y-2">
+        <div class="flex items-baseline gap-3"><span class="font-head text-tomato text-base shrink-0 tracking-widest uppercase">Address</span><span>276 N Palm Canyon Drive, Palm Springs, CA 92262</span></div>
+        <div class="flex items-baseline gap-3"><span class="font-head text-tomato text-base shrink-0 tracking-widest uppercase">Hours</span><span>Daily · 10:00 AM – 6:00 PM</span></div>
+        <div class="flex items-baseline gap-3"><span class="font-head text-tomato text-base shrink-0 tracking-widest uppercase">Phone</span><a href="tel:+17607787900" class="underline decoration-tomato decoration-2 underline-offset-2 hover:text-tomato">(760) 778-7900</a></div>
+        <div class="flex items-baseline gap-3"><span class="font-head text-tomato text-base shrink-0 tracking-widest uppercase">Cater</span><a href="mailto:Denabanes@aol.com" class="underline decoration-tomato decoration-2 underline-offset-2 hover:text-tomato">Denabanes@aol.com</a> · 24-hr notice</div>
+      </div>
+
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="https://www.google.com/maps/search/?api=1&query=The+Sandwich+Spot+276+N+Palm+Canyon+Dr+Palm+Springs" target="_blank" rel="noopener" class="bg-ink text-cream font-masthead text-sm sm:text-base tracking-widest px-5 py-3 border-2 border-ink hover:bg-tomato transition-colors">GET DIRECTIONS →</a>
+        <a href="tel:+17607787900" class="bg-tomato text-cream font-masthead text-sm sm:text-base tracking-widest px-5 py-3 border-2 border-ink hover:bg-ink hover:text-mustard transition-colors">CALL TO ORDER</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER MASTHEAD ==================== -->
+<footer class="bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <div class="text-center pb-4 border-b border-cream/20 mb-6">
+      <div class="font-masthead text-cream uppercase tracking-tight text-5xl sm:text-7xl leading-[0.85]">The Sandwich</div>
+      <div class="font-masthead text-tomato uppercase tracking-tight text-5xl sm:text-7xl leading-[0.85] -mt-1">Gazette</div>
+      <div class="font-hand text-mustard text-2xl mt-3">LOVE ALL ♥ FEED ALL</div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="font-masthead text-mustard text-base tracking-widest mb-3">DESK</div>
+        <ul class="space-y-1 text-sm">
+          <li><span class="text-cream/55 mr-2">EDITOR</span>Dena Banes &amp; Corlyn Saldana</li>
+          <li><span class="text-cream/55 mr-2">ESTABLISHED</span>2007</li>
+          <li><span class="text-cream/55 mr-2">CIRCULATION</span>One block of Palm Canyon Drive</li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-masthead text-mustard text-base tracking-widest mb-3">VITAL SIGNS</div>
+        <ul class="space-y-1 text-sm">
+          <li><span class="text-cream/55 mr-2">ADDR</span>276 N Palm Canyon Dr · PS 92262</li>
+          <li><span class="text-cream/55 mr-2">DIAL</span><a href="tel:+17607787900" class="hover:text-mustard">(760) 778-7900</a></li>
+          <li><span class="text-cream/55 mr-2">EMAIL</span><a href="mailto:Denabanes@aol.com" class="hover:text-mustard break-all">Denabanes@aol.com</a></li>
+          <li><span class="text-cream/55 mr-2">HOURS</span>Daily · 10am – 6pm</li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-masthead text-mustard text-base tracking-widest mb-3">STRINGERS</div>
+        <div class="flex flex-wrap gap-2">
+          <a href="https://www.instagram.com/thesandwichspotps/" target="_blank" rel="noopener" class="border-2 border-cream/30 hover:bg-tomato hover:border-tomato font-masthead text-xs tracking-widest px-3 py-2 transition-colors">Instagram</a>
+          <a href="https://www.facebook.com/SandwichSpotPalmSprings/" target="_blank" rel="noopener" class="border-2 border-cream/30 hover:bg-tomato hover:border-tomato font-masthead text-xs tracking-widest px-3 py-2 transition-colors">Facebook</a>
+          <a href="https://www.tiktok.com/@thesandwichspotofficial" target="_blank" rel="noopener" class="border-2 border-cream/30 hover:bg-tomato hover:border-tomato font-masthead text-xs tracking-widest px-3 py-2 transition-colors">TikTok</a>
+          <a href="https://www.yelp.com/biz/the-sandwich-spot-palm-springs" target="_blank" rel="noopener" class="border-2 border-cream/30 hover:bg-tomato hover:border-tomato font-masthead text-xs tracking-widest px-3 py-2 transition-colors">Yelp</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 pt-5 border-t border-cream/15 flex flex-wrap justify-between text-[11px] uppercase tracking-[0.18em] text-cream/55 gap-3">
+      <div>© <span id="yr"></span> The Sandwich Spot, Palm Springs · A mockup, not affiliated with the franchise</div>
+      <div class="font-body normal-case tracking-normal italic text-cream/65">— "All the bread that's fit to print." —</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Banana Bytes credit -->
+<div style="text-align:center; padding:1.25rem 1rem; font-size:0.7rem; letter-spacing:0.05em; opacity:0.55; background:#111; color:#FAF6E9;">
+  <a href="https://instagram.com/BananaCares" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+    Mockup created by Banana Bytes
+  </a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  els.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

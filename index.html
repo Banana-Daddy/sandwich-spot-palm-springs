@@ -3,28 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>The Sandwich Spot — Palm Springs · Two Directions for Dena</title>
-<meta name="description" content="Two distinct mockup directions for The Sandwich Spot, Palm Springs — by Banana Bytes. Pick your vibe.">
+<title>The Sandwich Spot — Palm Springs · Two Emergency Variants</title>
+<meta name="description" content="Two takes on the Sandwich Emergency direction for The Sandwich Spot, Palm Springs — by Banana Bytes. Both comedic, both 911-lunch energy, different visual languages.">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Sandwich Spot — Palm Springs · Mockups">
-<meta property="og:title" content="The Sandwich Spot — Palm Springs · Two Directions">
-<meta property="og:description" content="Two distinct mockup directions: Sandwich Emergency (loud, comedic) and Desert Postcard (editorial, vintage). Pick your vibe.">
+<meta property="og:title" content="The Sandwich Spot — Palm Springs · Two Emergency Variants">
+<meta property="og:description" content="Sandwich Emergency, two ways. V1 (911 dispatch + neubrutalist) and V2 (broadsheet newspaper). Same comedic register, different visual language.">
 <meta property="og:url" content="https://banana-daddy.github.io/sandwich-spot-palm-springs/">
 <meta property="og:image" content="https://banana-daddy.github.io/sandwich-spot-palm-springs/images/og.jpg">
 <meta property="og:image:secure_url" content="https://banana-daddy.github.io/sandwich-spot-palm-springs/images/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Two design directions for The Sandwich Spot, Palm Springs — Sandwich Emergency and Desert Postcard.">
+<meta property="og:image:alt" content="Two design variants for The Sandwich Spot, Palm Springs — V1 911 Dispatch and V2 Sandwich Gazette.">
 <meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Sandwich Spot — Palm Springs · Two Directions">
-<meta name="twitter:description" content="Two distinct mockup directions: Sandwich Emergency and Desert Postcard.">
+<meta name="twitter:title" content="The Sandwich Spot — Palm Springs · Two Emergency Variants">
+<meta name="twitter:description" content="Sandwich Emergency, two ways. V1 (911 dispatch) and V2 (broadsheet newspaper).">
 <meta name="twitter:image" content="https://banana-daddy.github.io/sandwich-spot-palm-springs/images/og.jpg">
-<meta name="twitter:image:alt" content="Two design directions for The Sandwich Spot, Palm Springs.">
+<meta name="twitter:image:alt" content="Two design variants for The Sandwich Spot, Palm Springs.">
 
 <meta name="theme-color" content="#FAF6E9">
 <link rel="icon" type="image/png" href="images/favicon.png">
@@ -33,165 +33,122 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      colors: {
-        cream: '#FAF6E9',
-        ink: '#111111',
-        tomato: '#E63946',
-        mustard: '#FFC83D',
-        navy: '#1F3A56',
-        terracotta: '#C7572B',
-        sage: '#8FA787',
-        marigold: '#F2A03F'
-      },
-      fontFamily: {
-        display: ['Anton','sans-serif'],
-        serif: ['"Cormorant Garamond"','Georgia','serif'],
-        hand: ['Caveat','cursive'],
-        body: ['Inter','sans-serif']
-      }
+      colors: { cream: '#FAF6E9', ink: '#111111', tomato: '#E63946', mustard: '#FFC83D', pickle: '#6B8E23', newsprint: '#F5EFE0' },
+      fontFamily: { display: ['Anton','sans-serif'], serif: ['"DM Serif Display"','Georgia','serif'], hand: ['Caveat','cursive'], body: ['Inter','sans-serif'] }
     }
   }
 }
 </script>
 <style>
   html, body { background: #FAF6E9; color: #111; font-family: 'Inter', sans-serif; }
-  .paper {
-    background-color: #FAF6E9;
-    background-image: radial-gradient(rgba(17,17,17,0.04) 1px, transparent 1px);
-    background-size: 18px 18px;
-  }
+  .paper { background-color: #FAF6E9; background-image: radial-gradient(rgba(17,17,17,0.04) 1px, transparent 1px); background-size: 18px 18px; }
   .shadow-block { box-shadow: 8px 8px 0 #111111; }
   .shadow-block-tomato { box-shadow: 8px 8px 0 #E63946; }
-  .shadow-block-navy { box-shadow: 8px 8px 0 #1F3A56; }
-
   .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
-
-  /* Emergency card */
   .card-a { transition: transform .3s ease, box-shadow .3s ease; }
-  .card-a:hover { transform: translate(-3px, -3px); box-shadow: 12px 12px 0 #111; }
-
-  /* Postcard card */
-  .card-b { transition: transform .3s ease, box-shadow .3s ease; }
-  .card-b:hover { transform: translate(-3px, -3px); box-shadow: 12px 12px 0 #1F3A56; }
-
+  .card-a:hover { transform: translate(-3px, -3px); box-shadow: 12px 12px 0 currentColor; }
   @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1; transform: none; transition: none; }
-    .card-a:hover, .card-b:hover { transform: none; box-shadow: 8px 8px 0 currentColor; }
+    .card-a:hover { transform: none; box-shadow: 8px 8px 0 currentColor; }
   }
 </style>
 </head>
 
 <body class="paper antialiased">
 
-<!-- ==================== TOP BAR ==================== -->
+<!-- TOP -->
 <header class="border-b-2 border-ink py-5 px-5 sm:px-8">
   <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
     <div class="flex items-baseline gap-3">
       <div class="font-display text-2xl tracking-wide">SANDWICH SPOT <span class="text-tomato">·</span> PS</div>
-      <span class="hidden sm:inline font-hand text-pickle text-xl text-sage">— design study</span>
+      <span class="hidden sm:inline font-hand text-pickle text-xl">— emergency edition</span>
     </div>
     <div class="text-xs font-medium uppercase tracking-widest text-ink/60">By Banana Bytes</div>
   </div>
 </header>
 
-<!-- ==================== INTRO ==================== -->
+<!-- INTRO -->
 <section class="px-5 sm:px-8 pt-12 sm:pt-20 pb-8 sm:pb-12">
   <div class="max-w-5xl mx-auto">
     <div class="font-hand text-tomato text-2xl sm:text-3xl mb-3 -rotate-1 inline-block">For Dena —</div>
     <h1 class="font-display uppercase leading-[0.85] tracking-wide text-[14vw] md:text-[7.5rem]">
-      Two ways<br>
-      to feel like<br>
-      <span class="text-tomato">Palm Springs.</span>
+      Two takes on<br>
+      <span class="text-tomato">Sandwich Emergency.</span>
     </h1>
     <p class="mt-7 text-lg sm:text-xl max-w-2xl leading-relaxed">
-      Two distinct directions for The Sandwich Spot — Palm Springs. Both lean into the comedy of the menu names and Palm Springs identity. Both put Dutch Crunch front and center. Both look nothing like the franchise template.
-      They differ in <strong>register</strong>: A is comedy-club loud, B is supper-club refined-but-cheeky.
+      You picked the comedic direction. Here are <strong>two ways</strong> to live it — same brand voice, same palette, same doodles, same Doctor Dena. Different <strong>visual language</strong>.
+      V1 reads like a 911 dispatch poster taped to the door. V2 reads like a Wednesday broadsheet that someone left on the counter.
     </p>
-    <p class="mt-4 font-hand text-2xl text-sage">— pick whichever makes you laugh first.</p>
+    <p class="mt-4 font-hand text-2xl text-pickle">— pick whichever makes you laugh harder.</p>
   </div>
 </section>
 
-<!-- ==================== TWO CARDS ==================== -->
+<!-- TWO CARDS: V1 vs V2 -->
 <section class="px-5 sm:px-8 py-10 sm:py-16">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
 
-    <!-- Card A: Emergency -->
-    <a href="direction-emergency.html" class="card-a block reveal">
+    <!-- V1: 911 dispatch -->
+    <a href="direction-emergency.html" class="card-a block reveal text-tomato">
       <div class="bg-cream border-4 border-ink shadow-block-tomato">
         <div class="bg-tomato text-cream border-b-4 border-ink px-5 py-3 flex items-center justify-between">
-          <div class="font-display text-xl tracking-widest">DIRECTION A · 911-LUNCH</div>
-          <div class="font-hand text-mustard text-2xl -rotate-3">loud · comedic</div>
+          <div class="font-display text-xl tracking-widest">V1 · 911 DISPATCH</div>
+          <div class="font-hand text-mustard text-2xl -rotate-3">block · stickered</div>
         </div>
         <div class="p-5 sm:p-7">
           <div class="aspect-[4/3] bg-cream border-2 border-ink overflow-hidden mb-6 relative">
-            <img src="images/d1-sandwich-stretcher.jpg" alt="Doodle of a giant sandwich on an emergency stretcher being rushed by EMTs through ER doors" loading="lazy" class="w-full h-full object-cover">
-            <div class="absolute top-3 left-3 bg-mustard border-2 border-ink px-2 py-1 font-display text-xs">DISPATCH UNIT 04</div>
-            <div class="absolute bottom-3 right-3 bg-tomato text-cream border-2 border-ink px-2 py-1 font-display text-xs rotate-3">★ STAT ★</div>
+            <img src="images/og-emergency.jpg" alt="V1 Sandwich Emergency hero — tomato red half with SANDWICH EMERGENCY RESPONSE TEAM in white display type, sandwich-stretcher doodle on cream right" loading="lazy" class="w-full h-full object-cover">
           </div>
-
-          <h2 class="font-display text-5xl sm:text-6xl uppercase leading-none mb-3">Sandwich<br><span class="text-tomato">Emergency</span></h2>
-          <p class="font-hand text-2xl text-sage -rotate-1 mb-4">— a 911 hotline that happens to make sandwiches</p>
-
-          <p class="text-base leading-relaxed mb-5">
-            Newbrutalist + anti-polish hand-drawn collage. Tomato red, mustard yellow, pickle green, mayo cream. Anton screaming, Caveat scribbling. Doctor Dena annotates the menu. Reviews are taped on like newspaper clippings.
+          <h2 class="font-display text-5xl sm:text-6xl uppercase leading-none mb-3 text-ink">Sandwich<br><span class="text-tomato">Emergency</span><br>Response Team</h2>
+          <p class="font-hand text-2xl text-pickle -rotate-1 mb-4">— the 911 hotline that happens to make sandwiches</p>
+          <p class="text-base leading-relaxed mb-5 text-ink">
+            Newbrutalist + anti-polish hand-drawn collage. Anton screams. Caveat scribbles. Doctor Dena annotates the menu. Reviews are taped on like newspaper clippings.
           </p>
-
-          <ul class="space-y-2 text-sm mb-6">
-            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> Scrolling EMERGENCY HOTLINE ticker at top</li>
+          <ul class="space-y-2 text-sm mb-6 text-ink">
+            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> Scrolling EMERGENCY HOTLINE ticker</li>
             <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> "What's Your Emergency?" 3-card triage</li>
-            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> Doctor Dena recurring annotations</li>
-            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> 24-sandwich classified-ad menu chart</li>
+            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> Doctor Dena annotations in the margins</li>
+            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> Block-stickered classified-ad menu</li>
           </ul>
-
           <div class="flex items-center justify-between border-t-2 border-ink pt-4">
             <div class="font-display text-tomato text-base tracking-widest">OPEN DISPATCH →</div>
-            <div class="font-hand text-xl text-ink/70">best for: laughing first</div>
+            <div class="font-hand text-xl text-ink/70">best for: posters &amp; punch</div>
           </div>
         </div>
       </div>
     </a>
 
-    <!-- Card B: Postcard -->
-    <a href="direction-postcard.html" class="card-b block reveal" style="transition-delay: .12s;">
-      <div class="bg-cream border-4 border-navy shadow-block-navy">
-        <div class="bg-navy text-cream border-b-4 border-navy px-5 py-3 flex items-center justify-between">
-          <div class="font-serif italic text-xl tracking-wide">Direction B · April 1962</div>
-          <div class="font-hand text-marigold text-2xl rotate-2">refined · cheeky</div>
+    <!-- V2: The Sandwich Gazette -->
+    <a href="direction-emergency-v2.html" class="card-a block reveal text-ink" style="transition-delay: .12s;">
+      <div class="bg-newsprint border-4 border-ink shadow-block">
+        <div class="bg-ink text-cream border-b-4 border-ink px-5 py-3 flex items-center justify-between">
+          <div class="font-display text-xl tracking-widest">V2 · THE GAZETTE</div>
+          <div class="font-hand text-mustard text-2xl rotate-2">broadsheet · printed</div>
         </div>
         <div class="p-5 sm:p-7">
-          <div class="aspect-[4/3] bg-cream border-2 border-navy overflow-hidden mb-6 relative">
-            <img src="images/d10-palm-mountains.jpg" alt="Doodle of a palm tree with the San Jacinto mountains and a rising sun" loading="lazy" class="w-full h-full object-cover">
-            <div class="absolute top-3 right-3 w-20 sm:w-24 rotate-[8deg]">
-              <img src="images/d9-wish-you-were-here.jpg" alt="WISH YOU WERE HERE postage stamp" loading="lazy" class="w-full">
-            </div>
+          <div class="aspect-[4/3] bg-newsprint border-2 border-ink overflow-hidden mb-6 relative">
+            <img src="images/og-emergency-v2.jpg" alt="V2 Sandwich Gazette hero — vintage broadsheet front page with masthead, BREAKING ribbon, lead headline and sandwich-stretcher photo pinned on the right" loading="lazy" class="w-full h-full object-cover">
           </div>
-
-          <h2 class="font-serif font-medium text-5xl sm:text-6xl leading-[0.9] tracking-tight mb-3 text-navy">
-            Desert<br><span class="italic text-terracotta">Postcard.</span>
-          </h2>
-          <p class="font-hand text-2xl text-sage rotate-1 mb-4">— a 1962 Palm Springs travel magazine</p>
-
-          <p class="font-serif text-lg leading-relaxed mb-5 text-navy/90">
-            Editorial magazine spread. Sun-bleached cream, terracotta, desert sage, vintage navy. Big Cormorant headlines, Karla body, Caveat in the margins. Dutch Crunch infographic deep-dive. Hall of Fame sidebar.
+          <h2 class="font-serif text-5xl sm:text-6xl leading-[0.9] mb-3 text-ink">The Sandwich<br><span class="text-tomato">Gazette.</span></h2>
+          <p class="font-hand text-2xl text-pickle rotate-1 mb-4">— the broadsheet of record covering the only emergency that matters</p>
+          <p class="font-body text-base leading-relaxed mb-5 text-ink">
+            Vintage newspaper front-page treatment. DM Serif Display headlines. Multi-column lead story. Classifieds-as-menu. WANTED poster for Doctor Dena. Weather forecast. Tennis index.
           </p>
-
-          <ul class="space-y-2 text-sm mb-6 text-navy">
-            <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">★</span> Magazine-cover hero with Vol/Issue masthead</li>
-            <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">★</span> Drop-cap editorial story with pull quote</li>
-            <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">★</span> Dutch Crunch field-guide infographic</li>
-            <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">★</span> Palm Springs Hall of Fame sidebar</li>
+          <ul class="space-y-2 text-sm mb-6 text-ink">
+            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> "BREAKING" front-page lead with byline</li>
+            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> 24-sandwich classified-ads grid</li>
+            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> WANTED · WEATHER · TENNIS INDEX trio</li>
+            <li class="flex gap-3"><span class="text-tomato font-bold shrink-0">★</span> Letters to the Editor (reviews)</li>
           </ul>
-
-          <div class="flex items-center justify-between border-t-2 border-navy pt-4">
-            <div class="font-serif italic text-navy text-base">Read the issue →</div>
-            <div class="font-hand text-xl text-navy/70">best for: feeling the place</div>
+          <div class="flex items-center justify-between border-t-2 border-ink pt-4">
+            <div class="font-serif text-ink text-lg italic">Read the issue →</div>
+            <div class="font-hand text-xl text-ink/70">best for: depth &amp; deadpan</div>
           </div>
         </div>
       </div>
@@ -199,41 +156,41 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- ==================== HOW THEY DIFFER ==================== -->
+<!-- HOW THEY DIFFER -->
 <section class="px-5 sm:px-8 py-12 sm:py-20 bg-ink text-cream">
   <div class="max-w-5xl mx-auto">
     <div class="font-hand text-mustard text-2xl mb-3">— quick reference —</div>
-    <h2 class="font-display text-5xl sm:text-7xl uppercase leading-none mb-10">A vs <span class="text-tomato">B</span></h2>
+    <h2 class="font-display text-5xl sm:text-7xl uppercase leading-none mb-10">V1 vs <span class="text-tomato">V2</span></h2>
 
     <div class="grid sm:grid-cols-2 gap-px bg-cream/15 text-sm">
       <div class="bg-ink p-5">
-        <div class="font-display text-mustard text-lg tracking-widest mb-2">A · EMERGENCY</div>
+        <div class="font-display text-mustard text-lg tracking-widest mb-2">V1 · 911 DISPATCH</div>
         <ul class="space-y-2 text-cream/85 leading-relaxed">
-          <li>Loud, comedic, urgent.</li>
-          <li>Punk-zine + 911 dispatch + diner.</li>
-          <li>Tomato red on mayo cream.</li>
-          <li>Anton screams. Caveat scribbles.</li>
-          <li>Doodles front-and-center.</li>
+          <li>Block layout, hard offset shadows.</li>
+          <li>Anton screams, Caveat scribbles.</li>
+          <li>Stickers, tape, taped review clippings.</li>
+          <li>Reads in 30 seconds. Loud first.</li>
+          <li>Best when the joke needs to hit fast.</li>
         </ul>
       </div>
       <div class="bg-ink p-5">
-        <div class="font-display text-marigold text-lg tracking-widest mb-2">B · POSTCARD</div>
+        <div class="font-display text-mustard text-lg tracking-widest mb-2">V2 · THE GAZETTE</div>
         <ul class="space-y-2 text-cream/85 leading-relaxed">
-          <li>Refined, editorial, quietly cheeky.</li>
-          <li>Travel magazine + supper club.</li>
-          <li>Terracotta on sun-bleached cream.</li>
-          <li>Cormorant tells stories. Caveat whispers.</li>
-          <li>Doodles in the margins.</li>
+          <li>Newspaper columns, halftone, classifieds.</li>
+          <li>DM Serif Display headlines, slab-serif body.</li>
+          <li>Bylines, sections, weather, sports.</li>
+          <li>Reads slowly. Deadpan first.</li>
+          <li>Best when the comedy is the framing.</li>
         </ul>
       </div>
     </div>
     <p class="mt-8 max-w-3xl font-hand text-mustard text-xl leading-snug">
-      A reader landing on A laughs first. A reader landing on B feels the place's history first, then catches the joke.
+      Same brand. Same palette. Same Doctor Dena. The whole joke is in the typeface and the layout.
     </p>
   </div>
 </section>
 
-<!-- ==================== FACTS STRIP ==================== -->
+<!-- FACTS STRIP -->
 <section class="px-5 sm:px-8 py-10 sm:py-14">
   <div class="max-w-5xl mx-auto border-2 border-ink/30 p-5 sm:p-7 grid sm:grid-cols-3 gap-5">
     <div>
@@ -254,7 +211,22 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- ==================== FOOTER ==================== -->
+<!-- ARCHIVED -->
+<section class="px-5 sm:px-8 py-10 sm:py-14 border-t border-ink/20">
+  <div class="max-w-5xl mx-auto">
+    <div class="font-hand text-pickle text-2xl mb-2">— archived from the previous round —</div>
+    <h3 class="font-display text-3xl sm:text-5xl uppercase leading-none mb-3">Direction B · <span class="text-tomato">Desert Postcard</span></h3>
+    <p class="text-base sm:text-lg leading-relaxed mb-4 max-w-3xl">
+      The editorial 1962 vintage-magazine take. Cream and terracotta, Cormorant headlines, Dutch Crunch infographic deep-dive, Palm Springs Hall of Fame sidebar.
+      Kept live for reference, not in contention.
+    </p>
+    <a href="direction-postcard.html" class="inline-flex items-center gap-2 border-b-2 border-ink hover:border-tomato hover:text-tomato pb-1 font-display text-base tracking-widest">
+      VIEW ARCHIVED DIRECTION B →
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="px-5 sm:px-8 py-12 border-t-2 border-ink/30">
   <div class="max-w-5xl mx-auto flex flex-wrap items-baseline justify-between gap-4">
     <div class="font-hand text-2xl text-tomato">LOVE ALL ♥ FEED ALL</div>

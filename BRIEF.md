@@ -15,11 +15,15 @@ The Sandwich Spot Palm Springs is an independently-operated franchise location a
 
 ---
 
-## Design Decisions — Two Directions
+## Outcome
 
-Both directions share: doodle illustrations from the same artist's hand, real verified content, "LOVE ALL ♥ FEED ALL" tagline, mobile-first responsive layout, IntersectionObserver scroll reveals gated by `prefers-reduced-motion`, full OG/Twitter/favicon meta, Banana Bytes credit footer.
+After review on 2026-04-29, **Sandwich Emergency was selected** as the chosen direction. Direction B (Desert Postcard) is preserved in the repo for reference but is no longer in contention. A second variant within the Sandwich Emergency direction was then built as **V2: The Sandwich Gazette** — same brand voice and palette, broadsheet-newspaper visual language instead of 911-dispatch posters.
 
-They differ in **register**: A is comedy-club loud, B is supper-club refined-but-cheeky.
+Selector at `index.html` now presents V1 vs V2.
+
+## Design Decisions — All Three Builds
+
+All three share: doodle illustrations from the same artist's hand, real verified content, "LOVE ALL ♥ FEED ALL" tagline, mobile-first responsive layout, IntersectionObserver scroll reveals gated by `prefers-reduced-motion`, full OG/Twitter/favicon meta, Banana Bytes credit footer.
 
 ### Direction: A — "SANDWICH EMERGENCY" 🚨
 **File**: `direction-emergency.html`
@@ -43,7 +47,25 @@ They differ in **register**: A is comedy-club loud, B is supper-club refined-but
 - **Trends used (BLAST mode rule, kept as a sanity check)**: Newbrutalism, Anti-Polish, Vibrant Block-based.
 - **Logos used (Logo Search)**: none — kept all icons as text/SVG/Anton type to maintain the aesthetic.
 
-### Direction: B — "DESERT POSTCARD, 1962" 🌴
+### Direction: A2 — "THE SANDWICH GAZETTE" 📰
+**File**: `direction-emergency-v2.html`
+
+- **Mood**: A vintage Palm Springs broadsheet newspaper covering The Sandwich Spot beat. Front-page masthead, "BREAKING" red ribbon, multi-column lead story with a byline by "Dena Banes, staff sandwich correspondent," classifieds-as-menu, Letters to the Editor (reviews), WANTED poster for Doctor Dena, weather forecast, tennis index. Comedy comes from the deadpan newspaper voice treating sandwiches like a serious metro story.
+- **Style backbone** (per `ui-ux-pro-max --design-system`): Editorial Grid + Brutalism (newsprint discipline — thin borders, narrow gutters, tight columns, no rounded corners, no shadows) + halftone dot pattern + tomato/mustard accent ribbon.
+- **Fonts**: DM Serif Display (newspaper headlines, italics) + Roboto Slab (body — slab-serif gives newspaper density) + Anton (masthead — same as V1 for brand continuity) + Caveat (handwritten margin notes — same as V1). Loaded via Google Fonts `<link>`.
+- **Colors**: identical to V1 (`#E63946` tomato · `#FFC83D` mustard · `#6B8E23` pickle · `#111111` ink · `#F5EFE0` newsprint cream — slightly more yellowed than V1's `#FAF6E9` to read as printed broadsheet).
+- **Layout**: traditional broadsheet — masthead band, section nav strip, BREAKING red ribbon + lead headline + 2-column body + lead photo, classifieds grid (3 columns desktop · 2 tablet · 1 mobile), sidebar trio (WANTED + WEATHER + TENNIS), Letters section, paid-advertisement block, visit/cartography section, masthead-footer.
+- **Signature moves**:
+  1. **THE SANDWICH GAZETTE masthead** in two stacked Anton lines (black + tomato), with VOL/NO/date strip above.
+  2. **"Bread crisis hits Palm Canyon Drive; twenty-four suspects identified."** lead headline in DM Serif Display italic.
+  3. **WANTED poster** for "Dr. Dena" — turns the Direction A character into a comedic wanted suspect.
+  4. **WEATHER + TENNIS INDEX sidebars** parodying real newspaper sections ("Today: dry. Heat. Sunshine. Outlook: see above. As usual." · Federer ★ TOP PICK · French Open ⚠ HOT).
+  5. **24-sandwich classified-ad grid** with FOR HIRE framing.
+  6. **Paid Advertisement block** with the rotary phone doodle and "Operators are eating sandwiches."
+- **Trends used**: Editorial Grid · halftone print effects · slab-serif typography density.
+- **Logos used (Logo Search)**: none.
+
+### Direction: B — "DESERT POSTCARD, 1962" 🌴 (archived, not selected)
 **File**: `direction-postcard.html`
 
 - **Mood**: A vintage Palm Springs travel magazine — heavy serif headlines, cream paper stock, terracotta and desert-sage accents, polaroid sandwich photos pinned with washi tape, and tiny hand-drawn doodles whispering jokes in the margins.
