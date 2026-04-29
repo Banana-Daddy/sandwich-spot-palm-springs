@@ -41,7 +41,7 @@ Build date: **2026-04-28** (PRO-MAX mode, two-direction build)
 - **Aspect**: 3:4 · ~1.7K×2.3K · 4.5MB
 - **Prompt**: "[style lock]. A friendly middle-aged woman character with shoulder-length dark hair, wearing a white deli apron, a white paper hat, and a doctor stethoscope around her neck. She is holding up a Dutch Crunch sandwich to the light like a doctor reading an X-ray, eyes squinted thoughtfully, kind warm smile, laugh lines around her eyes. Bust-up framing, three-quarter angle, expressive cartoon face. She must look approachable and matronly, like a beloved local mom-and-pop owner, not clinical or sterile. Tomato red apron stripes, mustard yellow stethoscope tubing."
 - **Claude review**: Use Case 10/10 | Prompt Accuracy 9/10 (stethoscope ended up tomato red instead of mustard yellow — minor; output is on-brand)
-- **Status**: ✓ Used
+- **Status**: ⏸ Replaced 2026-04-29 with a Daddy-supplied likeness that better resembles the real Dena. Original AI doodle preserved at `images/d3-doctor-dena-archived-doodle.jpg`. Same composition/palette/style — alt text on both V1 and V2 still describes it accurately.
 - **Notes**: The character anchors Direction A's "Doctor Dena" annotations through the menu. **Lesson**: Grok rejects `4:5`; valid ratios are `1:1, 3:4, 4:3, 9:16, 16:9, 2:3, 3:2, 9:19.5, 19.5:9, 9:20, 20:9, 1:2, 2:1, auto`. Updated the brief.
 
 ---
